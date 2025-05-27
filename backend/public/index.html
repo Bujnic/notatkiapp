@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notatki</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="auth">
+      <h1>Logowanie</h1>
+      <input type="email" id="email" placeholder="E-mail" />
+      <input type="password" id="password" placeholder="Hasło" />
+      <button onclick="login()">Zaloguj się</button>
+      <button onclick="register()">Zarejestruj się</button>
+      <button onclick="window.location.href='/auth/google'">
+        Zaloguj się przez Google
+      </button>
+    </div>
+
+    <div id="notes-app" style="display: none">
+      <h1>Moje notatki</h1>
+      <input type="text" id="newNoteTitle" placeholder="Tytuł notatki" />
+      <input type="text" id="newNote" placeholder="Wpisz notatkę" />
+      <button onclick="addNote()">Dodaj notatkę</button>
+      <button onclick="sortNotes()">Sortuj według daty</button>
+      <button onclick="sortNotes('title')">Sortuj według tytułu</button>
+      <button onclick="logout()">Wyloguj się</button>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Szukaj notatek"
+        onkeyup="searchNotes()"
+      />
+      <ul id="notesList"></ul>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

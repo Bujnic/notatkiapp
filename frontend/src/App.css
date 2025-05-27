@@ -1,0 +1,132 @@
+body.dark-mode {
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 100%);
+  color: #e0e0e0;
+}
+
+body {
+  background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+  color: #2d3748;
+}
+
+.container {
+  padding: 24px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.app-header {
+  background: linear-gradient(90deg, #3b82f6 0%, #10b981 100%);
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.app-header:hover {
+  transform: translateY(-2px);
+}
+
+.form-section {
+  background-color: var(--form-bg, #ffffff);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+body.dark-mode .form-section {
+  --form-bg: #2d2d2d;
+}
+
+.form-section:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.note-card {
+  background-color: var(--card-bg, #ffffff);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+body.dark-mode .note-card {
+  --card-bg: #2d2d2d;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.note-card.important {
+  border-left: 5px solid #facc15;
+}
+
+.note-content {
+  color: var(--text-secondary, #4b5563);
+  line-height: 1.6;
+}
+
+body.dark-mode .note-content {
+  --text-secondary: #b0b0b0;
+}
+
+.Toastify__toast {
+  font-family: "Roboto", sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  font-size: 14px;
+}
+
+body.dark-mode .Toastify__toast {
+  background-color: #3f3f3f;
+  color: #e0e0e0;
+}
+
+body .Toastify__toast {
+  background-color: #ffffff;
+  color: #2d3748;
+}
+
+button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.mode-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: var(--switch-bg, #f3f4f6);
+}
+
+body.dark-mode .mode-switch {
+  --switch-bg: #3f3f3f;
+}
+
+.filters-section {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px;
+  background-color: var(--filters-bg, #f9fafb);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .filters-section {
+  --filters-bg: #2d2d2d;
+}
